@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>UpdatesRootDir</key>
+    <string><%= updates_dir %></string>
+    <key>UpdatesMetadataDir</key>
+    <string><%= meta_dir %></string><% 
+   if !base_url.empty? %>
+    <key>LocalCatalogURLBase</key>
+    <string><%= base_url %></string>
+<% end 
+   if curl_options.length > 0 %>
+	<key>AdditionalCurlOptions<key>
+	<array>
+		<% 
+		curl_options.each do |opt|
+			puts "<string>" + opt + "</string>\n"
+		end
+		%>
+	</array>
+<% end
+   if catalog_urls.length > 0 %>
+	<key>AppleCatalogURLs</key>
+	<array>
+		<%
+		catalog_urls.each do |url|
+			puts "<string>" + url + "</string>\n"
+		end
+		%>
+	</array>
+<% end 
+   if preferred_locales.length > 0 %>
+	<key>PreferredLocalizations</key>
+	<array>
+		<%
+		preferred_locales.each do |locale|
+			puts "<string>" + locale + "</string>\n"
+		end
+		%>
+	</array>
+<% end 
+   if !curl_path.empty? %>
+	<key>CurlPath</key>
+	<string><%= curl_path %></string>
+<% end %>
+</dict>
+</plist>
