@@ -7,3 +7,8 @@ It requires the vcsrepo type to clone reposado from the github repository.
 All of the parameters are described in the class reposado::params.
 
 *Still a work in progress*
+
+TODO
+----
+
++ Provide a simple lighttpd configuration to serve reposado files.

@@ -1,0 +1,7 @@
+name 'cups'
+author 'mosen'
+description 'Reposado sync management'
+source 'https://github.com/mosen/puppet-reposado.git'
+summary 'This module manages configuration and scheduling of Reposado, the alternative software update system for apple software.'
+license 'GPLv3'
+version '0.0.1'
