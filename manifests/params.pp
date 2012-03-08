@@ -23,13 +23,13 @@ class reposado::params {
 	# ----------------
 	
 	# Options to curl
-	$curl_options = [],
+	$curl_options = []
 	
 	# Apple catalog urls
-	$catalog_urls = [],
+	$catalog_urls = []
 	
 	# Preferred localizations
-	$preferred_locales = [],
+	$preferred_locales = []
 	
 	# Path to curl binary
 	$curl_path = ''
