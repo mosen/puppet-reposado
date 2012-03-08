@@ -17,7 +17,10 @@ class reposado::params {
 	
 	# Group that the httpd service runs as, to ensure read access to updates and meta directories.
 	# The updates and metadata directories will still be owned by the reposado user.
-	$www_group = "www-data"
+	$www_group = $operatingsystem ? {
+		'debian' => 'www-data',
+		'CentOS' => 'apache',
+	}
 	
 	# Advanced Options
 	# ----------------
