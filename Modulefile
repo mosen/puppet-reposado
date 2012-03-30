@@ -1,4 +1,4 @@
-name 'cups'
+name 'reposado'
 author 'mosen'
 description 'Reposado sync management'
 source 'https://github.com/mosen/puppet-reposado.git'
