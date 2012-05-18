@@ -21,6 +21,11 @@ class reposado::params {
 		'debian' => 'www-data',
 		'CentOS' => 'apache',
 	}
+
+    # The hostname of the apache vhost (when using reposado::apache)
+    $vhost_name = "${fqdn}"
+    $vhost_port = "80"
+    $vhost_aliases = [""]
 	
 	# Advanced Options
 	# ----------------
