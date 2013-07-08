@@ -25,12 +25,16 @@ NameVirtualHost <%= vhost_name %>:<%= port %>
 
   <IfModule mod_rewrite.c>
 	RewriteEngine On
-	RewriteCond %{HTTP_USER_AGENT} Darwin/9
-	RewriteRule ^/index\.sucatalog$ /content/catalogs/others/index-leopard.merged-1.sucatalog
-	RewriteCond %{HTTP_USER_AGENT} Darwin/10
-	RewriteRule ^/index\.sucatalog$ /content/catalogs/others/index-leopard-snowleopard.merged-1.sucatalog
-	RewriteCond %{HTTP_USER_AGENT} Darwin/11
-	RewriteRule ^/index\.sucatalog$ /content/catalogs/others/index-lion-snowleopard-leopard.merged-1.sucatalog
+  RewriteCond %{HTTP_USER_AGENT} Darwin/8
+  RewriteRule ^/index(.*)\.sucatalog$ /content/catalogs/index$1.sucatalog [L]
+  RewriteCond %{HTTP_USER_AGENT} Darwin/9
+  RewriteRule ^/index(.*)\.sucatalog$ /content/catalogs/others/index-leopard.merged-1$1.sucatalog [L]
+  RewriteCond %{HTTP_USER_AGENT} Darwin/10
+  RewriteRule ^/index(.*)\.sucatalog$ /content/catalogs/others/index-leopard-snowleopard.merged-1$1.sucatalog [L]
+  RewriteCond %{HTTP_USER_AGENT} Darwin/11
+  RewriteRule ^/index(.*)\.sucatalog$ /content/catalogs/others/index-lion-snowleopard-leopard.merged-1$1.sucatalog [L]
+  RewriteCond %{HTTP_USER_AGENT} Darwin/12
+  RewriteRule ^/index(.*)\.sucatalog$ /content/catalogs/others/index-mountainlion-lion-snowleopard-leopard.merged-1$1.sucatalog [L]
   </IfModule>
 </VirtualHost>
 
