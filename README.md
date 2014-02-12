@@ -83,3 +83,9 @@ The most basic reposado configuration possible
 
 *NOTE* that this class is not responsible for setting up and configuring apache vhosts or whichever webserver you are
 using.
+
+## TODO
+
+- Uses outdated apache module, create Gemfile dependency on puppet-apache
+- Optional module to install margarita
+- Maybe re-evaluate using a params class.

@@ -35,6 +35,8 @@ NameVirtualHost <%= vhost_name %>:<%= port %>
   RewriteRule ^/index(.*)\.sucatalog$ /content/catalogs/others/index-lion-snowleopard-leopard.merged-1$1.sucatalog [L]
   RewriteCond %{HTTP_USER_AGENT} Darwin/12
   RewriteRule ^/index(.*)\.sucatalog$ /content/catalogs/others/index-mountainlion-lion-snowleopard-leopard.merged-1$1.sucatalog [L]
+  RewriteCond %{HTTP_USER_AGENT} Darwin/13
+  RewriteRule ^/index(.*)\.sucatalog$ /content/catalogs/others/index-10.9-mountainlion-lion-snowleopard-leopard.merged-1$1.sucatalog [L]
   </IfModule>
 </VirtualHost>
 
